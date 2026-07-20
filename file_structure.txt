@@ -1,0 +1,8 @@
+parser/
+├── requirements.txt
+├── src/
+│   ├── __init__.py
+│   ├── schemas.py      # Pydantic models for validation
+│   ├── engine.py       # Core parsing logic
+│   └── cli.py          # Typer CLI interface
+└── tests/              # (We will add tests here later)
