@@ -3,7 +3,7 @@ import sys
 import json
 import typer
 from typing import Optional
-from .engine import parse_messy_line
+from engine import parse_messy_line
 
 app = typer.Typer(help="A production-grade CLI parser for messy log files.")
 
@@ -21,7 +21,7 @@ def process(
     
     print("[")  # Start JSON array
     first_item = True
-    
+     
     # Read line-by-line to handle massive files without crashing memory
     for line in input_file:
         parsed_data = parse_messy_line(line)

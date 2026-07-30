@@ -7,5 +7,5 @@ from typing import Optional
 class structure_base(BaseModel):
     name: str = Field(..., description="Someone's FULL Name")
     age: int = Field(..., description="Someone's Age")
-    role: int = Field(..., description="Someone's Role")
+    role: str = Field(..., description="Someone's Role")
     department: Optional[str] = Field(None, description="Department name")

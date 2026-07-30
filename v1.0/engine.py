@@ -1,7 +1,7 @@
 import sys
 import re
 from pydantic import ValidationError
-from .schema import structure_base , EmployeeRecord
+from schema import structure_base 
 #declaration of a funtion to check for the irregularities in each structured input
 
 def parse_messy_line(raw_line: str) -> dict | None:
@@ -20,7 +20,7 @@ def parse_messy_line(raw_line: str) -> dict | None:
             
     try:
         # Pass the raw dictionary to Pydantic for strict validation
-        validated_record = EmployeeRecord(**raw_dict)
+        validated_record = structure_base(**raw_dict)
         return validated_record.model_dump()
         
     except ValidationError as e:
